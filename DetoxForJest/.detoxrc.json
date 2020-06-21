@@ -1,0 +1,20 @@
+{
+  "testRunner": "jest",
+  "runnerConfig": "e2e/config.json",
+  "configurations": {
+    "ios.sim.debug": {
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/DetoxForJest.app",
+      "build": "xcodebuild -workspace ios/DetoxForJest.xcworkspace  -scheme DetoxForJest -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+      "type": "ios.simulator",
+      "name": "iPhone 11"
+    },
+
+    "android": {
+      "type": "android.emulator",
+      "binaryPath": "SPECIFY_PATH_TO_YOUR_APP_BINARY",
+      "device": {
+        "avdName": "Pixel_2_API_29"
+      }
+    }
+  }
+}
